@@ -197,6 +197,7 @@ else
   syn match   pythonDottedName "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*\%(\.\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*\)*" display contained
 endif
 syn match   pythonDot        "\." display containedin=pythonDottedName
+syn match   pythonComma      "\," display
 
 "
 " Comments
@@ -505,7 +506,8 @@ if version >= 508 || !exists("did_python_syn_inits")
 
   HiLink pythonDecorator        Define
   HiLink pythonDottedName       Function
-  HiLink pythonDot              Normal
+  HiLink pythonDot              Special
+  HiLink pythonComma            Statement
 
   HiLink pythonComment          Comment
   if !s:Enabled("g:python_highlight_file_headers_as_comments")

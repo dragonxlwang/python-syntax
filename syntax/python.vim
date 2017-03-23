@@ -511,7 +511,7 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonDot              Identifier
   HiLink pythonComma            Statement
   HiLink pythonBraces           Special
-  HiLink pythonBrackets         ModeMsg
+  HiLink pythonBrackets         SpecialChar
 
   HiLink pythonComment          Comment
   if !s:Enabled("g:python_highlight_file_headers_as_comments")

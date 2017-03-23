@@ -198,7 +198,8 @@ else
 endif
 syn match   pythonDot        "\." display containedin=pythonDottedName
 syn match   pythonComma      "\," display
-syn match   pythonBraces     "[();\\{}][]" display
+syn match   pythonBraces     "[();\\{}]" display
+syn match   pythonBrackets   "[][]"
 
 "
 " Comments
@@ -510,6 +511,7 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonDot              Identifier
   HiLink pythonComma            Statement
   HiLink pythonBraces           Special
+  HiLink pythonBrackets         Type
 
   HiLink pythonComment          Comment
   if !s:Enabled("g:python_highlight_file_headers_as_comments")

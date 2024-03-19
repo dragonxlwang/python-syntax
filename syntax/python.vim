@@ -165,6 +165,8 @@ syn keyword pythonInclude       import
 syn keyword pythonImport        import
 syn keyword pythonException     try except finally
 syn keyword pythonOperator      and in is not or
+syn keyword pythonSelfKey       self
+syn match pythonEqualKey     "=" display
 
 syn match pythonStatement   "\<yield\>" display
 syn match pythonImport      "\<from\>" display
@@ -567,6 +569,8 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonBuiltinFunc      Function
 
   HiLink pythonExClass          Structure
+  HiLink pythonSelfKey          SelfKey
+  HiLink pythonEqualKey         EqualKey
 
   delcommand HiLink
 endif

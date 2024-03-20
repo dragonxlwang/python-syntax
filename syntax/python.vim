@@ -167,6 +167,7 @@ syn keyword pythonException     try except finally
 syn keyword pythonOperator      and in is not or
 syn keyword pythonSelfKey       self cls
 syn match pythonEqualKey     "=" display
+syn match pythonEqualKey     ":=" display
 
 syn match pythonStatement   "\<yield\>" display
 syn match pythonImport      "\<from\>" display
